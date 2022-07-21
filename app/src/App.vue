@@ -3,6 +3,7 @@
     <aside>
       <side-bar></side-bar>
     </aside>
+    <main>a</main>
   </div>
 </template>
 
@@ -23,5 +24,12 @@ export default {
 }
 body {
   background: rgb(32, 15, 86);
+}
+#app {
+  display: flex;
+}
+aside {
+  width: 30%;
+  max-width: 350px;
 }
 </style>
