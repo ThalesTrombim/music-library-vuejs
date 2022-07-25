@@ -1,9 +1,12 @@
 <template>
-  <section class="container">
+  <section class="profile-container">
     <img src="./../assets/profile.jpg" :alt="userName">
     <div>
       <h3>{{ userName }}</h3>
-      <v-icon name="settings"></v-icon>
+      <div class="actions-area">
+        <span>Edit profile</span>
+        <v-icon name="settings" class="settings-icon"></v-icon>
+      </div>
     </div>
   </section>
 </template>
@@ -15,9 +18,10 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.profile-container {
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 img {
   width: 100px;
@@ -26,6 +30,16 @@ img {
   border-radius: 5px;
 }
 h3 {
+  font-size: 24px;
   color: #FFF;
+}
+
+.actions-area {
+  display: flex;
+  gap: 9px;
+  margin-top: 12px;
+}
+.settings-icon {
+  width: 20px;
 }
 </style>
