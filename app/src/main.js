@@ -3,11 +3,12 @@ import App from "./App.vue";
 import feather from "vue-icon";
 
 import SideBar from "@/components/SideBar.vue";
-
+import TheSearcher from "@/components/ui/TheSearcher.vue";
 Vue.config.productionTip = false;
 
 Vue.use(feather, "v-icon");
 Vue.component("side-bar", SideBar);
+Vue.component("the-searcher", TheSearcher);
 
 new Vue({
   render: (h) => h(App),

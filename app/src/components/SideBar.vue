@@ -86,9 +86,6 @@ export default {
 .links-area ul li :hover {
   color: #FFF;
 }
-/* .v-icons:hover {
-  color: #FFF
-} */
 .divider {
   background: #585A69;
   width: 60%;

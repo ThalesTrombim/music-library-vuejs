@@ -3,7 +3,11 @@
     <aside>
       <side-bar></side-bar>
     </aside>
-    <main>a</main>
+    <main>
+      <header>
+        <the-searcher></the-searcher>
+      </header>
+    </main>
   </div>
 </template>
 
@@ -31,5 +35,11 @@ body {
 aside {
   width: 30%;
   max-width: 350px;
+}
+
+main {
+  width: 100%;
+  padding-left: 80px;
+  padding-top: 30px;
 }
 </style>
