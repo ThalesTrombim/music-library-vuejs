@@ -10,13 +10,15 @@
       <section>
         <div class="featured-playlists">
           <h3>Featured Playlists</h3>
-          <featured-playlists 
-            v-for="playlist in featuredPlaylists"
-            :key="playlist.playlistName"
-            :name="playlist.playlistName"
-            :tracks-amount="playlist.tracks"
-            :image="playlist.image"
-          ></featured-playlists>
+          <div class="featured-playlists-cards">
+            <featured-playlists-card
+              v-for="playlist in featuredPlaylists"
+              :key="playlist.playlistName"
+              :name="playlist.playlistName"
+              :tracks-amount="playlist.tracks"
+              :image="playlist.image"
+            ></featured-playlists-card>
+          </div>
         </div>
       </section>
     </main>
@@ -70,10 +72,11 @@ export default {
   color: #585A69;
 }
 body {
-  background: rgb(32, 15, 86);
+  background: #1D1632;
 }
 #app {
   display: flex;
+  overflow: hidden;
 }
 aside {
   width: 30%;
@@ -85,8 +88,31 @@ main {
   padding-left: 80px;
   padding-top: 30px;
 }
-
+.featured-playlists-cards {
+  display: flex;
+  width: 80%;
+  overflow-x: scroll;
+  gap: 20px;
+  padding-bottom: 30px;
+}
 .featured-playlists h3 {
   color: #FFF;
+  margin: 70px 0 30px 0;
+}
+::-webkit-scrollbar-track {
+  background-color: #1F1839;
+  height: 6px;
+  width: 6px;
+  border-radius: 50px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background: #200F56;
+}
+::-webkit-scrollbar-thumb {
+  background: #200F56;
+  border-radius: 50px;
 }
 </style>
