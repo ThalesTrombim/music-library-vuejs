@@ -21,6 +21,12 @@
           </div>
         </div>
       </section>
+      <section class="profileAndaTracks-area">
+        <div>
+          <profile-views></profile-views>
+        </div>
+        <div>2</div>
+      </section>
     </main>
   </div>
 </template>
@@ -30,9 +36,11 @@ import playlistImage1 from '@/assets/playlist1.jpg'
 import playlistImage2 from '@/assets/playlist2.jpg'
 import playlistImage3 from '@/assets/playlist3.jpg'
 import playlistImage4 from '@/assets/playlist4.jpg'
+import ProfileViews from './components/ProfileViews.vue'
 
 
 export default {
+  components: { ProfileViews },
   name: 'App',
   data() {
     return {
@@ -114,5 +122,10 @@ main {
 ::-webkit-scrollbar-thumb {
   background: #200F56;
   border-radius: 50px;
+}
+
+.profileAndaTracks-area {
+  display: flex;
+  padding-top: 30px;
 }
 </style>
