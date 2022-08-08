@@ -22,8 +22,13 @@
         </div>
       </section>
       <section class="profileAndaTracks-area">
-        <div>
-          <profile-views></profile-views>
+        <div class="profile-views">
+          <h3>Profile Views</h3>
+          <profile-views
+            v-for="profile in profileViews"
+            :key="profile.name"
+            :image="profile.image"
+          ></profile-views>
         </div>
         <div>2</div>
       </section>
@@ -38,6 +43,9 @@ import playlistImage3 from '@/assets/playlist3.jpg'
 import playlistImage4 from '@/assets/playlist4.jpg'
 import ProfileViews from './components/ProfileViews.vue'
 
+import profileView1 from '@/assets/view1.jpg';
+import profileView2 from '@/assets/view2.jpg';
+import profileView3 from '@/assets/view3.jpg';
 
 export default {
   components: { ProfileViews },
@@ -64,6 +72,26 @@ export default {
           playlistName: 'Indie Vibe',
           tracks: '138 tracks',
           image: playlistImage4
+        }
+      ],
+      profileViews: [
+        {
+          name: 'Jenny Villa',
+          daysAgo: 1,
+          albuns: 4,
+          image: profileView1
+        },
+        {
+          name: 'Aquila',
+          daysAgo: 3,
+          albuns: 2,
+          image: profileView2
+        },
+        {
+          name: 'This is War',
+          daysAgo: 14,
+          albuns: 5,
+          image: profileView3
         }
       ]
     }
@@ -127,5 +155,14 @@ main {
 .profileAndaTracks-area {
   display: flex;
   padding-top: 30px;
+}
+
+.profile-views {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.profile-views h3{
+  color: #FFF;
 }
 </style>
